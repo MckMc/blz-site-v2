@@ -1,0 +1,193 @@
+{
+  "navbar": {
+    "subtitle": "Sites para negócios de Búzios",
+    "services": "Serviços",
+    "portfolio": "Portfólio",
+    "process": "Como funciona",
+    "plans": "Planos",
+    "about": "Sobre nós",
+    "contact": "Contato",
+    "whatsapp": "Falar no WhatsApp",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "hero": {
+    "eyebrow": "Desenvolvimento web em Búzios",
+    "titleStart": "Sites profissionais para",
+    "titleHighlight": "negócios que querem crescer",
+    "description": "Criamos sites modernos, rápidos e preparados para transformar visitantes em clientes. Projetos pensados especialmente para restaurantes, pousadas, passeios e negócios locais de Búzios.",
+    "primaryButton": "Solicitar demonstração",
+    "secondaryButton": "Ver portfólio",
+    "availability": "Disponível para novos projetos",
+    "browserLabel": "Projeto em destaque",
+    "projectsLabel": "Projetos publicados",
+    "languagesLabel": "Idiomas disponíveis",
+    "responsiveLabel": "Responsivo"
+  },
+  "services": {
+  "eyebrow": "Soluções para negócios locais",
+  "title": "Tudo o que seu negócio precisa para",
+  "titleHighlight": "se destacar online",
+  "description": "Criamos experiências digitais pensadas para apresentar seu negócio, facilitar o contato com clientes e transformar visitas em oportunidades reais.",
+  "restaurantTitle": "Restaurantes e gastronomia",
+  "restaurantDescription": "Sites com cardápio digital, localização, horários, pedidos pelo WhatsApp e uma apresentação visual que valoriza seus produtos.",
+  "lodgingTitle": "Pousadas e hospedagens",
+  "lodgingDescription": "Apresente quartos, serviços, galeria, localização e canais de reserva em um site moderno e confiável.",
+  "toursTitle": "Passeios e experiências",
+  "toursDescription": "Divulgue roteiros, atrações, preços e formas de reserva de maneira simples, visual e profissional.",
+  "whatsappTitle": "Integração com WhatsApp",
+  "whatsappDescription": "Botões estratégicos e mensagens prontas para facilitar o contato e aumentar as oportunidades de venda.",
+  "languagesTitle": "Site em três idiomas",
+  "languagesDescription": "Português, espanhol e inglês para atender turistas de diferentes países e ampliar o alcance do seu negócio.",
+  "responsiveTitle": "Perfeito em qualquer tela",
+  "responsiveDescription": "Sites rápidos e responsivos, preparados para funcionar muito bem em celular, tablet e computador.",
+  "featuredLabel": "Mais procurado"
+},
+"portfolio": {
+  "eyebrow": "Projetos reais",
+  "title": "Sites que já estão",
+  "titleHighlight": "prontos para impressionar",
+  "description": "Conheça alguns projetos desenvolvidos pela BLZ Site para diferentes tipos de negócios de Búzios.",
+  "liveButton": "Ver site ao vivo",
+  "codeButton": "Ver código",
+  "similarButton": "Quero um parecido",
+  "restaurantCategory": "Restaurante",
+  "restaurantTitle": "Hamburgueria Búzios",
+  "restaurantDescription": "Uma experiência digital completa para hamburguerias, com cardápio interativo, carrinho e pedidos pelo WhatsApp.",
+  "restaurantFeatures": [
+    "Cardápio digital",
+    "Carrinho de pedidos",
+    "Integração com WhatsApp",
+    "Design responsivo"
+  ],
+  "toursCategory": "Passeios e turismo",
+  "toursTitle": "Búzios Viva Passeios",
+  "toursDescription": "Site turístico moderno para apresentar passeios, experiências, roteiros e facilitar reservas.",
+  "toursFeatures": [
+    "Catálogo de passeios",
+    "Experiências em destaque",
+    "Perguntas frequentes",
+    "Contato direto"
+  ],
+  "lodgingCategory": "Pousada",
+  "lodgingTitle": "Pousada Brisa Búzios",
+  "lodgingDescription": "Uma apresentação elegante para pousadas, com quartos, serviços, galeria, localização e reservas.",
+  "lodgingFeatures": [
+    "Apresentação de quartos",
+    "Galeria de imagens",
+    "Mapa e localização",
+    "Botões de reserva"
+  ]
+},
+"process": {
+  "eyebrow": "Como funciona",
+  "title": "Do primeiro contato ao seu site",
+  "titleHighlight": "publicado e funcionando",
+  "description": "Um processo simples, transparente e pensado para que você acompanhe cada etapa sem complicações.",
+  "stepOneTitle": "Conhecemos seu negócio",
+  "stepOneDescription": "Conversamos sobre sua empresa, seus serviços, seu público e o que você deseja alcançar com o site.",
+  "stepTwoTitle": "Criamos a proposta visual",
+  "stepTwoDescription": "Definimos estrutura, cores, conteúdo e estilo para construir uma identidade alinhada ao seu negócio.",
+  "stepThreeTitle": "Desenvolvemos o site",
+  "stepThreeDescription": "Transformamos a proposta em um site rápido, responsivo, moderno e preparado para receber clientes.",
+  "stepFourTitle": "Publicamos e acompanhamos",
+  "stepFourDescription": "Colocamos o site no ar, conectamos domínio e WhatsApp e realizamos os últimos ajustes.",
+  "finalTitle": "Você acompanha todo o projeto",
+  "finalDescription": "Nada é feito no escuro. Você recebe atualizações, pode solicitar ajustes e participa das principais decisões.",
+  "finalButton": "Conversar sobre meu projeto"
+},
+"plans": {
+  "eyebrow": "Planos",
+  "title": "Uma solução para cada",
+  "titleHighlight": "tipo de negócio",
+  "description": "Escolha o ponto de partida ideal para sua empresa. Todos os projetos são personalizados e adaptados à sua identidade.",
+  "popularLabel": "Mais escolhido",
+  "startingFrom": "Projeto",
+  "customPrice": "Sob orçamento",
+  "button": "Solicitar proposta",
+
+  "essentialName": "Essencial",
+  "essentialDescription": "Ideal para negócios que precisam começar com uma presença profissional na internet.",
+  "essentialFeatures": [
+    "Landing page profissional",
+    "Design responsivo",
+    "Integração com WhatsApp",
+    "Informações de serviços",
+    "Mapa e localização",
+    "Formulário de contato"
+  ],
+
+  "professionalName": "Profissional",
+  "professionalDescription": "Para empresas que desejam apresentar melhor seus serviços e transformar visitas em contatos.",
+  "professionalFeatures": [
+    "Site com várias seções",
+    "Design personalizado",
+    "Português, espanhol e inglês",
+    "Galeria de imagens",
+    "SEO inicial",
+    "Integração com redes sociais",
+    "Suporte para publicação"
+  ],
+
+  "premiumName": "Premium",
+  "premiumDescription": "Uma experiência digital completa para negócios que querem se destacar e vender mais.",
+  "premiumFeatures": [
+    "Site completo e personalizado",
+    "Páginas internas",
+    "Cardápio ou catálogo digital",
+    "Sistema de pedidos pelo WhatsApp",
+    "Animações e interações",
+    "SEO avançado inicial",
+    "Configuração de domínio",
+    "Acompanhamento pós-publicação"
+  ],
+
+  "note": "O valor final depende das funcionalidades, quantidade de páginas e necessidades específicas do projeto."
+},
+"about": {
+  "eyebrow": "Sobre a BLZ Site",
+  "title": "Tecnologia, design e uma visão",
+  "titleHighlight": "local de Búzios",
+  "descriptionOne": "A BLZ Site nasceu com o objetivo de ajudar negócios locais a terem uma presença digital profissional, moderna e preparada para gerar novos contatos.",
+  "descriptionTwo": "Conhecemos a realidade de restaurantes, pousadas, passeios e pequenos empreendedores da região. Por isso, criamos sites diretos, fáceis de usar e pensados para o público que visita Búzios.",
+  "badge": "Desenvolvimento feito em Búzios",
+  "valueOneTitle": "Atendimento próximo",
+  "valueOneDescription": "Conversamos diretamente com você durante todas as etapas do projeto.",
+  "valueTwoTitle": "Design personalizado",
+  "valueTwoDescription": "Cada site é criado de acordo com a identidade e os objetivos do negócio.",
+  "valueThreeTitle": "Foco em resultados",
+  "valueThreeDescription": "Criamos experiências digitais pensadas para gerar contatos, reservas e pedidos.",
+  "statOneValue": "3",
+  "statOneLabel": "projetos demonstrativos",
+  "statTwoValue": "3",
+  "statTwoLabel": "idiomas disponíveis",
+  "statThreeValue": "100%",
+  "statThreeLabel": "design responsivo",
+  "button": "Conhecer nosso trabalho"
+},
+"cta": {
+  "eyebrow": "Vamos conversar",
+  "title": "Seu negócio merece um site que",
+  "titleHighlight": "trabalhe por você",
+  "description": "Conte para nós sobre seu negócio e descubra como podemos transformar sua presença digital em uma ferramenta para gerar contatos, reservas e pedidos.",
+  "whatsappButton": "Falar pelo WhatsApp",
+  "instagramButton": "Conhecer o Instagram",
+  "emailLabel": "E-mail",
+  "whatsappLabel": "WhatsApp",
+  "instagramLabel": "Instagram",
+  "availability": "Atendimento em Búzios e região"
+},
+"footer": {
+  "description": "Sites modernos e profissionais para restaurantes, pousadas, passeios e negócios locais de Búzios.",
+  "navigationTitle": "Navegação",
+  "contactTitle": "Contato",
+  "homeLink": "Início",
+  "servicesLink": "Serviços",
+  "portfolioLink": "Projetos",
+  "processLink": "Processo",
+  "plansLink": "Planos",
+  "aboutLink": "Sobre nós",
+  "rights": "Todos os direitos reservados.",
+  "madeIn": "Criado em Búzios, Rio de Janeiro"
+}
+}

@@ -1,0 +1,387 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: 1px solid transparent;
+  background: rgba(247, 251, 252, 0.72);
+  backdrop-filter: blur(18px);
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.headerScrolled {
+  border-bottom-color: var(--border);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 40px rgba(6, 46, 64, 0.07);
+}
+
+.navbar {
+  min-height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 84px;
+  height: 58px;
+  object-fit: contain;
+  transform: scale(1.08);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brandText strong {
+  color: var(--blue-dark);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.brandText span {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.desktopNavigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.5vw, 25px);
+  margin-left: auto;
+}
+
+.desktopNavigation a {
+  position: relative;
+  padding: 10px 0;
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  font-weight: 800;
+  transition: color 180ms ease;
+}
+
+.desktopNavigation a::after {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  left: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--turquoise);
+  content: '';
+  transform: scaleX(0);
+  transition: transform 180ms ease;
+}
+
+.desktopNavigation a:hover {
+  color: var(--blue-dark);
+}
+
+.desktopNavigation a:hover::after {
+  transform: scaleX(1);
+}
+
+.desktopActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.languageSelector {
+  display: flex;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.languageSelector button {
+  min-width: 36px;
+  height: 32px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.languageSelector .activeLanguage {
+  background: var(--blue-dark);
+  color: white;
+  box-shadow: 0 7px 18px rgba(6, 46, 64, 0.18);
+}
+
+.whatsappButton,
+.mobileWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--turquoise), var(--blue));
+  color: white;
+  font-weight: 850;
+  box-shadow: 0 13px 30px rgba(8, 117, 154, 0.23);
+}
+
+.whatsappButton {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.whatsappButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 17px 36px rgba(8, 117, 154, 0.3);
+}
+
+.whatsappButton svg,
+.mobileWhatsapp svg {
+  width: 18px;
+  height: 18px;
+}
+
+.menuButton {
+  position: relative;
+  z-index: 1100;
+  width: 46px;
+  height: 46px;
+  display: none;
+  margin-left: auto;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-small);
+}
+
+.menuButton span {
+  position: absolute;
+  left: 12px;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--blue-dark);
+  transition:
+    top 220ms ease,
+    transform 220ms ease,
+    opacity 220ms ease;
+}
+
+.menuButton span:nth-child(1) {
+  top: 15px;
+}
+
+.menuButton span:nth-child(2) {
+  top: 22px;
+}
+
+.menuButton span:nth-child(3) {
+  top: 29px;
+}
+
+.menuButtonOpen span:nth-child(1) {
+  top: 22px;
+  transform: rotate(45deg);
+}
+
+.menuButtonOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButtonOpen span:nth-child(3) {
+  top: 22px;
+  transform: rotate(-45deg);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(3, 22, 31, 0.48);
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  transition: opacity 240ms ease;
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: min(390px, 90vw);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(12, 170, 178, 0.15),
+      transparent 18rem
+    ),
+    white;
+  box-shadow: -25px 0 80px rgba(3, 22, 31, 0.18);
+  transform: translateX(105%);
+  visibility: hidden;
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 300ms;
+}
+
+.mobileMenuOpen {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.mobileHeader {
+  min-height: 66px;
+  padding-right: 54px;
+}
+
+.mobileBrand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobileLogo {
+  width: 72px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.mobileBrand div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mobileBrand strong {
+  color: var(--blue-dark);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.mobileBrand span {
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.mobileNavigation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 42px;
+}
+
+.mobileNavigation a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--blue-dark);
+  font-size: clamp(1.18rem, 5vw, 1.5rem);
+  font-weight: 850;
+  letter-spacing: -0.035em;
+}
+
+.mobileNavigation a span {
+  color: var(--turquoise);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.mobileFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.mobileLanguages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.mobileLanguages button {
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--surface-soft);
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.mobileLanguages .activeMobileLanguage {
+  border-color: var(--blue-dark);
+  background: var(--blue-dark);
+  color: white;
+}
+
+.mobileWhatsapp {
+  min-height: 54px;
+  border-radius: 14px;
+}
+
+@media (max-width: 1120px) {
+  .brandText {
+    display: none;
+  }
+
+  .desktopNavigation {
+    gap: 13px;
+  }
+
+  .desktopNavigation a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .desktopNavigation,
+  .desktopActions {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileMenu {
+    width: 92vw;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 76px;
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "navbar": {
+    "subtitle": "Websites for businesses in Búzios",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "process": "How it works",
+    "plans": "Plans",
+    "about": "About us",
+    "contact": "Contact",
+    "whatsapp": "Chat on WhatsApp",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "Web development in Búzios",
+    "titleStart": "Professional websites for",
+    "titleHighlight": "businesses ready to grow",
+    "description": "We create modern, fast websites designed to turn visitors into customers. Projects made especially for restaurants, inns, tours and local businesses in Búzios.",
+    "primaryButton": "Request a free demo",
+    "secondaryButton": "View portfolio",
+    "availability": "Available for new projects",
+    "browserLabel": "Featured project",
+    "projectsLabel": "Published projects",
+    "languagesLabel": "Available languages",
+    "responsiveLabel": "Responsive"
+  },
+  "services": {
+  "eyebrow": "Solutions for local businesses",
+  "title": "Everything your business needs to",
+  "titleHighlight": "stand out online",
+  "description": "We create digital experiences designed to present your business, make customer contact easier and turn visits into real opportunities.",
+  "restaurantTitle": "Restaurants and food businesses",
+  "restaurantDescription": "Websites with digital menus, location, opening hours, WhatsApp ordering and a visual presentation that highlights your products.",
+  "lodgingTitle": "Inns and accommodation",
+  "lodgingDescription": "Show rooms, services, galleries, location and booking channels through a modern and trustworthy website.",
+  "toursTitle": "Tours and experiences",
+  "toursDescription": "Present itineraries, attractions, prices and booking options in a simple, visual and professional way.",
+  "whatsappTitle": "WhatsApp integration",
+  "whatsappDescription": "Strategic buttons and ready-made messages that make contact easier and create more sales opportunities.",
+  "languagesTitle": "Website in three languages",
+  "languagesDescription": "Portuguese, Spanish and English to serve tourists from different countries and expand your business reach.",
+  "responsiveTitle": "Perfect on every screen",
+  "responsiveDescription": "Fast and responsive websites designed to work beautifully on phones, tablets and computers.",
+  "featuredLabel": "Most requested"
+},
+"portfolio": {
+  "eyebrow": "Real projects",
+  "title": "Websites already",
+  "titleHighlight": "built to impress",
+  "description": "Explore some projects developed by BLZ Site for different types of businesses in Búzios.",
+  "liveButton": "View live website",
+  "codeButton": "View code",
+  "similarButton": "I want something similar",
+  "restaurantCategory": "Restaurant",
+  "restaurantTitle": "Hamburgueria Búzios",
+  "restaurantDescription": "A complete digital experience for burger restaurants, featuring an interactive menu, shopping cart and WhatsApp ordering.",
+  "restaurantFeatures": [
+    "Digital menu",
+    "Order cart",
+    "WhatsApp integration",
+    "Responsive design"
+  ],
+  "toursCategory": "Tours and tourism",
+  "toursTitle": "Búzios Viva Passeios",
+  "toursDescription": "A modern tourism website designed to present tours, experiences, itineraries and make booking easier.",
+  "toursFeatures": [
+    "Tour catalogue",
+    "Featured experiences",
+    "Frequently asked questions",
+    "Direct contact"
+  ],
+  "lodgingCategory": "Accommodation",
+  "lodgingTitle": "Pousada Brisa Búzios",
+  "lodgingDescription": "An elegant presentation for inns, featuring rooms, services, gallery, location and booking options.",
+  "lodgingFeatures": [
+    "Room presentation",
+    "Image gallery",
+    "Map and location",
+    "Booking buttons"
+  ]
+},
+"process": {
+  "eyebrow": "How it works",
+  "title": "From the first conversation to your website",
+  "titleHighlight": "live and working",
+  "description": "A simple and transparent process designed so you can follow every stage without complications.",
+  "stepOneTitle": "We understand your business",
+  "stepOneDescription": "We talk about your company, services, audience and what you want to achieve with the website.",
+  "stepTwoTitle": "We create the visual direction",
+  "stepTwoDescription": "We define structure, colours, content and style to build an identity aligned with your business.",
+  "stepThreeTitle": "We develop the website",
+  "stepThreeDescription": "We turn the proposal into a fast, responsive and modern website ready to receive customers.",
+  "stepFourTitle": "We publish and support",
+  "stepFourDescription": "We launch the website, connect the domain and WhatsApp and complete the final adjustments.",
+  "finalTitle": "You follow the entire project",
+  "finalDescription": "Nothing happens behind closed doors. You receive updates, request changes and take part in key decisions.",
+  "finalButton": "Talk about my project"
+},
+"plans": {
+  "eyebrow": "Plans",
+  "title": "A solution for every",
+  "titleHighlight": "type of business",
+  "description": "Choose the ideal starting point for your company. Every project is customized and adapted to your brand.",
+  "popularLabel": "Most popular",
+  "startingFrom": "Project",
+  "customPrice": "Custom quote",
+  "button": "Request proposal",
+
+  "essentialName": "Essential",
+  "essentialDescription": "Ideal for businesses that need to start with a professional online presence.",
+  "essentialFeatures": [
+    "Professional landing page",
+    "Responsive design",
+    "WhatsApp integration",
+    "Service information",
+    "Map and location",
+    "Contact form"
+  ],
+
+  "professionalName": "Professional",
+  "professionalDescription": "For companies that want to present their services better and turn visits into enquiries.",
+  "professionalFeatures": [
+    "Website with multiple sections",
+    "Custom design",
+    "Portuguese, Spanish and English",
+    "Image gallery",
+    "Initial SEO",
+    "Social media integration",
+    "Publishing support"
+  ],
+
+  "premiumName": "Premium",
+  "premiumDescription": "A complete digital experience for businesses that want to stand out and sell more.",
+  "premiumFeatures": [
+    "Complete custom website",
+    "Internal pages",
+    "Digital menu or catalogue",
+    "WhatsApp ordering system",
+    "Animations and interactions",
+    "Advanced initial SEO",
+    "Domain configuration",
+    "Post-launch support"
+  ],
+
+  "note": "The final price depends on features, number of pages and the specific requirements of the project."
+},
+"about": {
+  "eyebrow": "About BLZ Site",
+  "title": "Technology, design and a",
+  "titleHighlight": "local view of Búzios",
+  "descriptionOne": "BLZ Site was created to help local businesses build a professional and modern digital presence designed to generate new enquiries.",
+  "descriptionTwo": "We understand the reality of restaurants, inns, tour companies and small businesses in the region. That is why we create direct and easy-to-use websites designed for people visiting Búzios.",
+  "badge": "Developed in Búzios",
+  "valueOneTitle": "Personal service",
+  "valueOneDescription": "You communicate directly with us throughout every stage of the project.",
+  "valueTwoTitle": "Custom design",
+  "valueTwoDescription": "Every website is designed around the identity and goals of the business.",
+  "valueThreeTitle": "Results focused",
+  "valueThreeDescription": "We create digital experiences designed to generate enquiries, bookings and orders.",
+  "statOneValue": "3",
+  "statOneLabel": "demonstration projects",
+  "statTwoValue": "3",
+  "statTwoLabel": "available languages",
+  "statThreeValue": "100%",
+  "statThreeLabel": "responsive design",
+  "button": "Explore our work"
+},
+"cta": {
+  "eyebrow": "Let us talk",
+  "title": "Your business deserves a website that",
+  "titleHighlight": "works for you",
+  "description": "Tell us about your business and discover how we can transform your digital presence into a tool for generating enquiries, bookings and orders.",
+  "whatsappButton": "Talk on WhatsApp",
+  "instagramButton": "Visit Instagram",
+  "emailLabel": "Email",
+  "whatsappLabel": "WhatsApp",
+  "instagramLabel": "Instagram",
+  "availability": "Serving Búzios and the surrounding area"
+},
+"footer": {
+  "description": "Modern and professional websites for restaurants, inns, tours and local businesses in Búzios.",
+  "navigationTitle": "Navigation",
+  "contactTitle": "Contact",
+  "homeLink": "Home",
+  "servicesLink": "Services",
+  "portfolioLink": "Projects",
+  "processLink": "Process",
+  "plansLink": "Plans",
+  "aboutLink": "About us",
+  "rights": "All rights reserved.",
+  "madeIn": "Created in Búzios, Rio de Janeiro"
+}
+}
