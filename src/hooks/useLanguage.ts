@@ -1,6 +1,10 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useState
+} from 'react';
 
 import en from '@/locales/en.json';
 import es from '@/locales/es.json';
@@ -11,40 +15,51 @@ import type {
   Translation
 } from '@/types/translations';
 
+const STORAGE_KEY = 'blz-language';
+
 const translations: Record<Language, Translation> = {
   pt,
   es,
   en
 };
 
-function isLanguage(value: string | null): value is Language {
-  return value === 'pt' || value === 'es' || value === 'en';
+function isLanguage(
+  value: string | null
+): value is Language {
+  return (
+    value === 'pt' ||
+    value === 'es' ||
+    value === 'en'
+  );
 }
 
 function getInitialLanguage(): Language {
-  /*
-   * Durante el render del servidor usamos portugués.
-   * Así el HTML generado siempre tiene un valor estable.
-   */
-  if (typeof window === 'undefined') {
-    return 'pt';
-  }
-
   const savedLanguage =
-    window.localStorage.getItem('blz-language');
+    window.localStorage.getItem(STORAGE_KEY);
 
   if (isLanguage(savedLanguage)) {
     return savedLanguage;
   }
 
-  const browserLanguage =
-    window.navigator.language.toLowerCase();
+  const browserLanguages =
+    window.navigator.languages?.length
+      ? window.navigator.languages
+      : [window.navigator.language];
 
-  if (browserLanguage.startsWith('es')) {
+  const detectedLanguage = browserLanguages
+    .map((item) => item.toLowerCase())
+    .find(
+      (item) =>
+        item.startsWith('es') ||
+        item.startsWith('en') ||
+        item.startsWith('pt')
+    );
+
+  if (detectedLanguage?.startsWith('es')) {
     return 'es';
   }
 
-  if (browserLanguage.startsWith('en')) {
+  if (detectedLanguage?.startsWith('en')) {
     return 'en';
   }
 
@@ -55,12 +70,28 @@ export function useLanguage() {
   const [language, setLanguageState] =
     useState<Language>('pt');
 
+  useEffect(() => {
+
+    const timeoutId = window.setTimeout(() => {
+      const initialLanguage = getInitialLanguage();
+
+      setLanguageState(initialLanguage);
+
+      document.documentElement.lang =
+        initialLanguage;
+    }, 0);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, []);
+
   const setLanguage = useCallback(
     (newLanguage: Language) => {
       setLanguageState(newLanguage);
 
       window.localStorage.setItem(
-        'blz-language',
+        STORAGE_KEY,
         newLanguage
       );
 
