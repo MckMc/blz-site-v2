@@ -1,3 +1,6 @@
+'use client';
+
+import { trackEvent } from '@/lib/analytics';
 import type { Translation } from '@/types/translations';
 
 import styles from './Portfolio.module.css';
@@ -6,7 +9,13 @@ type PortfolioProps = {
   translation: Translation['portfolio'];
 };
 
+type ProjectSlug =
+  | 'hamburgueria'
+  | 'passeios'
+  | 'pousada';
+
 type Project = {
+  slug: ProjectSlug;
   category: string;
   title: string;
   description: string;
@@ -25,6 +34,7 @@ export default function Portfolio({
 }: PortfolioProps) {
   const projects: Project[] = [
     {
+      slug: 'hamburgueria',
       category: translation.restaurantCategory,
       title: translation.restaurantTitle,
       description: translation.restaurantDescription,
@@ -36,28 +46,59 @@ export default function Portfolio({
       accent: 'orange'
     },
     {
+      slug: 'passeios',
       category: translation.toursCategory,
       title: translation.toursTitle,
       description: translation.toursDescription,
       features: translation.toursFeatures,
       video: '/videos/passeios.webm',
-      liveUrl: 'https://buzios-viva-passeios.vercel.app/',
+      liveUrl:
+        'https://buzios-viva-passeios.vercel.app/',
       githubUrl:
         'https://github.com/MckMc/buzios-viva-passeios',
       accent: 'turquoise'
     },
     {
+      slug: 'pousada',
       category: translation.lodgingCategory,
       title: translation.lodgingTitle,
       description: translation.lodgingDescription,
       features: translation.lodgingFeatures,
       video: '/videos/pousada.webm',
-      liveUrl: 'https://pousada-brisa-buzios.vercel.app/',
+      liveUrl:
+        'https://pousada-brisa-buzios.vercel.app/',
       githubUrl:
         'https://github.com/MckMc/pousada-brisa-buzios',
       accent: 'blue'
     }
   ];
+
+  function trackDemoClick(project: Project) {
+    trackEvent({
+      eventName: 'portfolio_demo_click',
+      category: 'portfolio',
+      label: project.slug,
+      value: project.title
+    });
+  }
+
+  function trackGithubClick(project: Project) {
+    trackEvent({
+      eventName: 'github_click',
+      category: 'portfolio',
+      label: project.slug,
+      value: project.title
+    });
+  }
+
+  function trackSimilarProjectClick(project: Project) {
+    trackEvent({
+      eventName: 'whatsapp_click',
+      category: 'portfolio',
+      label: `similar_${project.slug}`,
+      value: project.title
+    });
+  }
 
   return (
     <section id="portfolio" className={styles.portfolio}>
@@ -88,7 +129,7 @@ export default function Portfolio({
 
             return (
               <article
-                key={project.title}
+                key={project.slug}
                 className={`${styles.project} ${
                   index % 2 !== 0 ? styles.reverse : ''
                 }`}
@@ -135,7 +176,9 @@ export default function Portfolio({
                         />
                       </video>
 
-                      <div className={styles.videoGradient} />
+                      <div
+                        className={styles.videoGradient}
+                      />
                     </div>
                   </div>
 
@@ -168,6 +211,9 @@ export default function Portfolio({
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.primaryAction}
+                      onClick={() =>
+                        trackDemoClick(project)
+                      }
                     >
                       <ExternalIcon />
                       {translation.liveButton}
@@ -178,6 +224,9 @@ export default function Portfolio({
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.secondaryAction}
+                      onClick={() =>
+                        trackGithubClick(project)
+                      }
                     >
                       <GithubIcon />
                       {translation.codeButton}
@@ -188,6 +237,9 @@ export default function Portfolio({
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.whatsappAction}
+                      onClick={() =>
+                        trackSimilarProjectClick(project)
+                      }
                     >
                       <WhatsAppIcon />
                       {translation.similarButton}

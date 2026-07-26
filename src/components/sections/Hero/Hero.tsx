@@ -1,5 +1,6 @@
 'use client';
 
+import { trackEvent } from '@/lib/analytics';
 import type { Translation } from '@/types/translations';
 
 import styles from './Hero.module.css';
@@ -12,6 +13,22 @@ const WHATSAPP_URL =
   'https://wa.me/5522997913238?text=Olá!%20Vi%20o%20site%20da%20BLZ%20Site%20e%20gostaria%20de%20solicitar%20uma%20demonstração.';
 
 export default function Hero({ translation }: HeroProps) {
+  function trackWhatsAppClick() {
+    trackEvent({
+      eventName: 'whatsapp_click',
+      category: 'contact',
+      label: 'hero_primary_cta'
+    });
+  }
+
+  function trackPortfolioClick() {
+    trackEvent({
+      eventName: 'cta_click',
+      category: 'navigation',
+      label: 'hero_portfolio_cta'
+    });
+  }
+
   return (
     <section id="inicio" className={styles.hero}>
       <div className={styles.backgroundGlowOne} />
@@ -39,6 +56,7 @@ export default function Hero({ translation }: HeroProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="primaryButton"
+              onClick={trackWhatsAppClick}
             >
               <WhatsAppIcon />
               {translation.primaryButton}
@@ -47,6 +65,7 @@ export default function Hero({ translation }: HeroProps) {
             <a
               href="#portfolio"
               className="secondaryButton"
+              onClick={trackPortfolioClick}
             >
               {translation.secondaryButton}
               <ArrowIcon />
@@ -130,26 +149,26 @@ export default function Hero({ translation }: HeroProps) {
             </div>
           </div>
 
-<div className={styles.mobilePreview}>
-  <div className={styles.mobileSpeaker} />
+          <div className={styles.mobilePreview}>
+            <div className={styles.mobileSpeaker} />
 
-  <video
-    className={styles.mobileVideo}
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="metadata"
-    aria-hidden="true"
-  >
-    <source
-      src="/videos/hamb-celu.mp4"
-      type="video/mp4"
-    />
-  </video>
+            <video
+              className={styles.mobileVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            >
+              <source
+                src="/videos/hamb-celu.mp4"
+                type="video/mp4"
+              />
+            </video>
 
-  <div className={styles.mobileHomeIndicator} />
-</div>
+            <div className={styles.mobileHomeIndicator} />
+          </div>
 
           <div className={styles.decorativeCard}>
             <span>BLZ</span>
