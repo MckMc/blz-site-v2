@@ -1,6 +1,7 @@
 import type { Translation } from '@/types/translations';
 
 import styles from './ContactCTA.module.css';
+import { trackEvent } from '@/lib/analytics';
 
 type ContactCTAProps = {
   translation: Translation['cta'];
@@ -18,6 +19,29 @@ const EMAIL_URL =
 export default function ContactCTA({
   translation
 }: ContactCTAProps) {
+  function trackWhatsApp(label: string) {
+  trackEvent({
+    eventName: 'whatsapp_click',
+    category: 'contact',
+    label
+  });
+}
+
+function trackInstagram(label: string) {
+  trackEvent({
+    eventName: 'instagram_click',
+    category: 'social',
+    label
+  });
+}
+
+function trackEmail(label: string) {
+  trackEvent({
+    eventName: 'email_click',
+    category: 'contact',
+    label
+  });
+}
   return (
     <section
       id="contato"
@@ -50,6 +74,7 @@ export default function ContactCTA({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.primaryButton}
+                onClick={() => trackWhatsApp('contact_cta')}
               >
                 <WhatsAppIcon />
                 {translation.whatsappButton}
@@ -93,6 +118,8 @@ export default function ContactCTA({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.contactItem}
+                  onClick={() => trackWhatsApp('contact_panel')}
+
               >
                 <span className={styles.contactIcon}>
                   <WhatsAppIcon />
@@ -111,6 +138,7 @@ export default function ContactCTA({
               <a
                 href={EMAIL_URL}
                 className={styles.contactItem}
+                onClick={() => trackEmail('contact_panel')}
               >
                 <span className={styles.contactIcon}>
                   <EmailIcon />
@@ -133,6 +161,7 @@ export default function ContactCTA({
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.contactItem}
+                onClick={() => trackInstagram('contact_panel')}
               >
                 <span className={styles.contactIcon}>
                   <InstagramIcon />
