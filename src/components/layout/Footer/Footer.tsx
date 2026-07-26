@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 
+import { trackEvent } from '@/lib/analytics';
 import type { Translation } from '@/types/translations';
 
 import styles from './Footer.module.css';
@@ -21,6 +24,30 @@ export default function Footer({
   translation
 }: FooterProps) {
   const currentYear = new Date().getFullYear();
+
+  function trackWhatsApp(location: string) {
+    trackEvent({
+      eventName: 'whatsapp_click',
+      category: 'contact',
+      label: location
+    });
+  }
+
+  function trackInstagram(location: string) {
+    trackEvent({
+      eventName: 'instagram_click',
+      category: 'social',
+      label: location
+    });
+  }
+
+  function trackEmail(location: string) {
+    trackEvent({
+      eventName: 'email_click',
+      category: 'contact',
+      label: location
+    });
+  }
 
   return (
     <footer className={styles.footer}>
@@ -49,6 +76,9 @@ export default function Footer({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
+                onClick={() =>
+                  trackWhatsApp('footer_social_icon')
+                }
               >
                 <WhatsAppIcon />
               </a>
@@ -58,6 +88,9 @@ export default function Footer({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
+                onClick={() =>
+                  trackInstagram('footer_social_icon')
+                }
               >
                 <InstagramIcon />
               </a>
@@ -65,6 +98,9 @@ export default function Footer({
               <a
                 href={EMAIL_URL}
                 aria-label="Email"
+                onClick={() =>
+                  trackEmail('footer_social_icon')
+                }
               >
                 <EmailIcon />
               </a>
@@ -109,6 +145,9 @@ export default function Footer({
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackWhatsApp('footer_contact_link')
+                }
               >
                 <span>
                   <WhatsAppIcon />
@@ -117,7 +156,12 @@ export default function Footer({
                 +55 22 99791-3238
               </a>
 
-              <a href={EMAIL_URL}>
+              <a
+                href={EMAIL_URL}
+                onClick={() =>
+                  trackEmail('footer_contact_link')
+                }
+              >
                 <span>
                   <EmailIcon />
                 </span>
@@ -129,6 +173,9 @@ export default function Footer({
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackInstagram('footer_contact_link')
+                }
               >
                 <span>
                   <InstagramIcon />
