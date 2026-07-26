@@ -4,6 +4,7 @@ import { Sora } from 'next/font/google';
 
 import CookieBanner from '@/components/cookies/CookieBanner';
 import GoogleAnalyticsConsent from '@/components/analytics/GoogleAnalyticsConsent';
+import StructuredData from '@/components/seo/StructuredData';
 
 import './globals.css';
 
@@ -78,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={sora.variable}>
+        <StructuredData />
         {children}
 
         <CookieBanner />
