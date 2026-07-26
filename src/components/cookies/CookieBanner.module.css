@@ -1,0 +1,124 @@
+.banner {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.content {
+  width: min(100%, 760px);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(8, 26, 43, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(18px);
+  color: #ffffff;
+  pointer-events: auto;
+}
+
+.text {
+  max-width: 520px;
+}
+
+.text strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.text p {
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.link {
+  color: #76d9db;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.acceptButton,
+.rejectButton {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    background 180ms ease;
+}
+
+.acceptButton {
+  border: 1px solid #f2c45c;
+  background: #f2c45c;
+  color: #102538;
+}
+
+.rejectButton {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: transparent;
+  color: #ffffff;
+}
+
+.acceptButton:hover,
+.rejectButton:hover {
+  transform: translateY(-2px);
+}
+
+.acceptButton:focus-visible,
+.rejectButton:focus-visible,
+.link:focus-visible {
+  outline: 3px solid rgba(118, 217, 219, 0.7);
+  outline-offset: 3px;
+}
+
+@media (max-width: 680px) {
+  .banner {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .content {
+    padding: 18px;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 18px;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .acceptButton,
+  .rejectButton {
+    flex: 1;
+  }
+}

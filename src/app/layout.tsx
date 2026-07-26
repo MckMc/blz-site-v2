@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Sora } from 'next/font/google';
 
+import CookieBanner from '@/components/cookies/CookieBanner';
+import GoogleAnalyticsConsent from '@/components/analytics/GoogleAnalyticsConsent';
+
 import './globals.css';
 
 const sora = Sora({
@@ -13,10 +16,7 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: {
     default: 'BLZ Site | Sites profissionais em Búzios',
-    template: '%s | BLZ Site',
-  },
-  openGraph: {
-    images: ['/og-image.png']
+    template: '%s | BLZ Site'
   },
   description:
     'Criamos sites modernos e profissionais para restaurantes, pousadas, passeios e negócios locais de Búzios.',
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     'sites para pousadas',
     'BLZ Site'
   ],
+  openGraph: {
+    images: ['/og-image.png']
+  },
   icons: {
     icon: '/images/logo-con-texto.png'
   }
@@ -42,7 +45,12 @@ export default function RootLayout({
 }: Readonly<RootLayoutProps>) {
   return (
     <html lang="pt">
-      <body className={sora.variable}>{children}</body>
+      <body className={sora.variable}>
+        {children}
+
+        <CookieBanner />
+        <GoogleAnalyticsConsent />
+      </body>
     </html>
   );
 }
