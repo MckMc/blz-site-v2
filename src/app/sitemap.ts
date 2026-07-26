@@ -1,12 +1,38 @@
 import type { MetadataRoute } from 'next';
 
+const BASE_URL = 'https://blzsite.com.br';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://blzsite.com.br',
+      url: BASE_URL,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
+    },
+    {
+      url: `${BASE_URL}/politica-de-privacidade`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/termos-de-uso`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/politica-de-cookies`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/aviso-legal`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.3,
     },
   ];
 }
