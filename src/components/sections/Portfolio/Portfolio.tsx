@@ -220,19 +220,6 @@ export default function Portfolio({
                     </a>
 
                     <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.secondaryAction}
-                      onClick={() =>
-                        trackGithubClick(project)
-                      }
-                    >
-                      <GithubIcon />
-                      {translation.codeButton}
-                    </a>
-
-                    <a
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
