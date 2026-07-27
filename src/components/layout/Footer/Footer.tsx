@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 
+import LegalLinks from '@/components/legal/LegalLinks/LegalLinks';
 import { trackEvent } from '@/lib/analytics';
 import type { Translation } from '@/types/translations';
 
@@ -57,7 +58,7 @@ export default function Footer({
             <a
               href="#inicio"
               className={styles.logo}
-              aria-label="BLZ Site"
+              aria-label="Voltar ao início da BLZ Site"
             >
               <Image
                 src="/images/logo-inverso.png"
@@ -75,7 +76,7 @@ export default function Footer({
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp"
+                aria-label="Falar com a BLZ Site pelo WhatsApp"
                 onClick={() =>
                   trackWhatsApp('footer_social_icon')
                 }
@@ -87,7 +88,7 @@ export default function Footer({
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
+                aria-label="Abrir Instagram da BLZ Site"
                 onClick={() =>
                   trackInstagram('footer_social_icon')
                 }
@@ -97,7 +98,7 @@ export default function Footer({
 
               <a
                 href={EMAIL_URL}
-                aria-label="Email"
+                aria-label="Enviar e-mail para a BLZ Site"
                 onClick={() =>
                   trackEmail('footer_social_icon')
                 }
@@ -110,7 +111,7 @@ export default function Footer({
           <div className={styles.column}>
             <h3>{translation.navigationTitle}</h3>
 
-            <nav>
+            <nav aria-label="Navegação do rodapé">
               <a href="#inicio">
                 {translation.homeLink}
               </a>
@@ -187,6 +188,10 @@ export default function Footer({
           </div>
         </div>
 
+        <div className={styles.legalSection}>
+          <LegalLinks />
+        </div>
+
         <div className={styles.bottom}>
           <p>
             © {currentYear} BLZ Site.{' '}
@@ -195,7 +200,8 @@ export default function Footer({
 
           <p className={styles.location}>
             <LocationIcon />
-            {translation.madeIn}
+
+            Desenvolvido em Búzios • RJ
           </p>
         </div>
       </div>

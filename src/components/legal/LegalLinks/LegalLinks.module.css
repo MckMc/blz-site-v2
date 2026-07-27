@@ -1,0 +1,27 @@
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.legalLinks a {
+  color: rgba(255,255,255,.72);
+  text-decoration: none;
+  font-size: .9rem;
+  transition: color .2s ease;
+}
+
+.legalLinks a:hover {
+  color: #76d9db;
+}
+
+@media (max-width:768px){
+
+  .legalLinks{
+    gap:10px;
+    flex-direction:column;
+  }
+
+}
